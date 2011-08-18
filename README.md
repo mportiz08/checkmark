@@ -1,6 +1,6 @@
-Checkmark
+checkmark
 =========
-> "preview your markdown"
+> "**check** your **mark**down"
 
 Install
 -------
@@ -14,4 +14,4 @@ Usage
 
 Notes
 -----
-Checkmark uses the `open` command, which exists in OS X (and possibly other UNIX based systems?). Use at your own risk...
+If you're using OS X, checkmark will open the rendered html for your markdown file in a web browser. Otherwise, you can manually open the `mark.html` file that is created  your `$HOME/.check/` directory.
