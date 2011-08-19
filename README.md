@@ -2,6 +2,8 @@ checkmark
 =========
 > "**check** your **mark**down"
 
+Checkmark converts your markdown files to html.
+
 Install
 -------
 
