@@ -3,4 +3,15 @@
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'checkmark'
 
-Checkmark.run ARGV.first
+if ARGV.size != 1
+  $stderr.puts Checkmark.usage
+  exit 1
+else
+  if ARGV.first == '--version'
+    puts Checkmark.version
+  elsif ARGV.first == '--help'
+    puts Checkmark.help
+  else
+    Checkmark.run ARGV.first
+  end
+end

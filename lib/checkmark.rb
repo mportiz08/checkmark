@@ -2,6 +2,8 @@ require 'redcarpet'
 require 'fileutils'
 
 module Checkmark
+  VERSION = '0.1.1'
+  
 HTML_BEGIN = <<HTML
 <!DOCTYPE html>
 <html>
@@ -73,5 +75,25 @@ HTML
       f.write HTML_END
     end
     `open #{self.preview_file}` if RUBY_PLATFORM =~ /darwin/
+  end
+  
+  def self.usage
+    "Usage: checkmark <file>"
+  end
+  
+  def self.version
+    "checkmark v#{VERSION}\nmarcus ortiz"
+  end
+  
+  def self.help
+help = <<HELP
+Examples:
+  checkmark README.md
+  checkmark path/to/file.markdown
+
+Notes:
+If you're using OS X, checkmark will open the rendered html for your markdown file in a web browser. Otherwise, you can manually open the `mark.html` file that is created  your `$HOME/.check/` directory.
+HELP
+  "#{self.usage}\n\n#{help}"
   end
 end
